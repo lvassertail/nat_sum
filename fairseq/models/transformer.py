@@ -1034,3 +1034,7 @@ def transformer_wmt_en_de_big_t2t(args):
     args.attention_dropout = getattr(args, "attention_dropout", 0.1)
     args.activation_dropout = getattr(args, "activation_dropout", 0.1)
     transformer_vaswani_wmt_en_de_big(args)
+
+@register_model_architecture("transformer", "transformer_summarisation")
+def transformer_summarisation(args):
+    base_architecture(args)
